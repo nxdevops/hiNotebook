@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-      echo $NEXT_VERSION
+      sh 'echo $NEXT_VERSION'
       }
     }
 
