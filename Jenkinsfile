@@ -1,12 +1,12 @@
 pipeline {
   agent any
       environment {
-        NEXT_VERSION = nextVersion()
+        SEM_VER = nextVersion()
       }
   stages {
     stage('build') {
       steps {
-      sh 'echo $NEXT_VERSION'
+      sh 'echo $SEM_VER'
       }
     }
 
