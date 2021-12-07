@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
+      sh 'ls -lart'
       sh 'echo $SEM_VER'
       }
     }
