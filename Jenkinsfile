@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent node
       environment {
         SEM_VER = nextVersion()
       }
@@ -8,6 +8,7 @@ pipeline {
       steps {
       sh 'ls -lart'
       sh 'echo $SEM_VER'
+      sh 'node -v'
       }
     }
 
