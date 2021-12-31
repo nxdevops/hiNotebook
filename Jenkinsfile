@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+    agent {
+        docker { image 'node:14-slim' }
+    }
       environment {
         SEM_VER = nextVersion()
       }
@@ -8,6 +10,7 @@ pipeline {
       steps {
       sh 'ls -lart'
       sh 'echo $SEM_VER'
+      sh 'node -v'
       }
     }
 
